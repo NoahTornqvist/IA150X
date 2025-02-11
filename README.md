@@ -2,7 +2,6 @@
 
 ### Authors
 
-Brian Onoszko
-Noah Törnqvist
+Brian Onoszko and Noah Törnqvist
 
 ## Required software
