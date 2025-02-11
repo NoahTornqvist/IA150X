@@ -1,3 +1,3 @@
-# Bachelor project in IA150X#
+# Bachelor project in IA150X
 
-# Required software
+## Required software
