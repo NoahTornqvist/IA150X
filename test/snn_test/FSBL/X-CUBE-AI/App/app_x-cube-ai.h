@@ -23,13 +23,6 @@ extern "C" {
   ******************************************************************************
   */
 
-/* IO buffers ----------------------------------------------------------------*/
-
-extern ai_i8* data_ins[];
-extern ai_i8* data_outs[];
-
-extern ai_handle data_activations0[];
-
 void MX_X_CUBE_AI_Init(void);
 void MX_X_CUBE_AI_Process(void);
 #ifdef __cplusplus

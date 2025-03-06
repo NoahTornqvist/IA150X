@@ -1,420 +1,726 @@
 {
   "buffers": [
     {
-      "alignment": 4,
-      "batch": 0,
+      "alignment": 1,
+      "batch": 1,
+      "channel_first": true,
+      "channel_last": true,
+      "epochs": {
+        "end": 2,
+        "start": 0
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 1,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Input_0_out_0",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        1,
+        10
+      ],
+      "shape_map": [],
+      "size_bytes": 40
+    },
+    {
+      "alignment": 1,
+      "batch": 1,
+      "channel_first": true,
+      "channel_last": true,
+      "epochs": {
+        "end": 16,
+        "start": 13
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 2,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Sigmoid_6_out_0",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 0
+      },
+      "shape": [
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 4
+    },
+    {
+      "alignment": 1,
+      "batch": 10,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 2,
+        "start": 0
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 3,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Gemm_1_reshape_x_2",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        1,
+        10,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 40
+    },
+    {
+      "alignment": 1,
+      "batch": 64,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 3,
+        "start": 2
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 4,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Gemm_1_conv_4_in",
+      "nbits": 32,
+      "offset_start": 256,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 0
+      },
+      "shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 256
+    },
+    {
+      "alignment": 1,
+      "batch": 64,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 7,
+        "start": 3
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 5,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Gemm_1_conv_4",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 0
+      },
+      "shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 256
+    },
+    {
+      "alignment": 1,
+      "batch": 1,
+      "channel_first": true,
+      "channel_last": true,
+      "epochs": {
+        "end": 7,
+        "start": 3
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 6,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Gemm_1_out_0",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        1,
+        64
+      ],
+      "shape_map": [],
+      "size_bytes": 256
+    },
+    {
+      "alignment": 1,
+      "batch": 1,
+      "channel_first": true,
+      "channel_last": true,
+      "epochs": {
+        "end": 7,
+        "start": 3
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 7,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Relu_2_out_0",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 0
+      },
+      "shape": [
+        1,
+        64
+      ],
+      "shape_map": [],
+      "size_bytes": 256
+    },
+    {
+      "alignment": 1,
+      "batch": 64,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 7,
+        "start": 3
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 8,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Gemm_3_reshape_x_8",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 256
+    },
+    {
+      "alignment": 1,
+      "batch": 32,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 8,
+        "start": 7
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 9,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Gemm_3_conv_10_in",
+      "nbits": 32,
+      "offset_start": 256,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 0
+      },
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 128
+    },
+    {
+      "alignment": 1,
+      "batch": 32,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 12,
+        "start": 8
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 10,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Gemm_3_conv_10",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 0
+      },
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 128
+    },
+    {
+      "alignment": 1,
+      "batch": 1,
       "channel_first": true,
       "channel_last": true,
       "epochs": {
         "end": 12,
-        "start": 9
+        "start": 8
       },
-      "flags": "STAI_FLAG_PREALLOCATED|STAI_FLAG_ACTIVATIONS",
+      "flags": "",
       "format": "STAI_FORMAT_FLOAT",
-      "id": 119,
-      "intq": {},
+      "id": 11,
       "is_param": false,
-      "mpool_id": 0,
-      "name": "_Relu_1_output_0_output_array",
-      "nbits": 32,
-      "offset_start": 128,
-      "qmn": {},
-      "shape": [
-        32
-      ],
-      "shape_map": [
-        "CH"
-      ],
-      "size_bytes": 128
-    },
-    {
-      "alignment": 4,
-      "batch": 0,
-      "channel_first": true,
-      "channel_last": true,
-      "epochs": {
-        "end": 8,
-        "start": 5
-      },
-      "flags": "STAI_FLAG_PREALLOCATED|STAI_FLAG_ACTIVATIONS",
-      "format": "STAI_FORMAT_FLOAT",
-      "id": 115,
-      "intq": {},
-      "is_param": false,
-      "mpool_id": 0,
-      "name": "_Relu_output_0_output_array",
-      "nbits": 32,
-      "offset_start": 128,
-      "qmn": {},
-      "shape": [
-        64
-      ],
-      "shape_map": [
-        "CH"
-      ],
-      "size_bytes": 256
-    },
-    {
-      "alignment": 4,
-      "batch": 0,
-      "channel_first": true,
-      "channel_last": true,
-      "epochs": {
-        "end": 1,
-        "start": 0
-      },
-      "flags": "STAI_FLAG_WEIGHTS|STAI_FLAG_CONST|STAI_FLAG_PREALLOCATED",
-      "format": "STAI_FORMAT_FLOAT",
-      "id": 128,
-      "intq": {},
-      "is_param": true,
-      "mpool_id": 1,
-      "name": "_layer1_Gemm_output_0_bias_array",
-      "nbits": 32,
-      "offset_start": 2560,
-      "qmn": {},
-      "shape": [
-        64
-      ],
-      "shape_map": [
-        "CH"
-      ],
-      "size_bytes": 256
-    },
-    {
-      "alignment": 4,
-      "batch": 0,
-      "channel_first": true,
-      "channel_last": true,
-      "epochs": {
-        "end": 6,
-        "start": 3
-      },
-      "flags": "STAI_FLAG_PREALLOCATED|STAI_FLAG_ACTIVATIONS",
-      "format": "STAI_FORMAT_FLOAT",
-      "id": 113,
-      "intq": {},
-      "is_param": false,
-      "mpool_id": 0,
-      "name": "_layer1_Gemm_output_0_output_array",
-      "nbits": 32,
-      "offset_start": 128,
-      "qmn": {},
-      "shape": [
-        64
-      ],
-      "shape_map": [
-        "CH"
-      ],
-      "size_bytes": 256
-    },
-    {
-      "alignment": 4,
-      "batch": 0,
-      "channel_first": true,
-      "channel_last": true,
-      "epochs": {
-        "end": 1,
-        "start": 0
-      },
-      "flags": "STAI_FLAG_WEIGHTS|STAI_FLAG_CONST|STAI_FLAG_PREALLOCATED",
-      "format": "STAI_FORMAT_FLOAT",
-      "id": 125,
-      "intq": {},
-      "is_param": true,
-      "mpool_id": 1,
-      "name": "_layer1_Gemm_output_0_weights_array",
+      "mpool_id": 2,
+      "name": "Gemm_3_out_0",
       "nbits": 32,
       "offset_start": 0,
-      "qmn": {},
-      "shape": [
-        64,
-        10
-      ],
-      "shape_map": [
-        "CH",
-        "CH_IN"
-      ],
-      "size_bytes": 2560
-    },
-    {
-      "alignment": 4,
-      "batch": 0,
-      "channel_first": true,
-      "channel_last": true,
-      "epochs": {
-        "end": 1,
-        "start": 0
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
       },
-      "flags": "STAI_FLAG_WEIGHTS|STAI_FLAG_CONST|STAI_FLAG_PREALLOCATED",
-      "format": "STAI_FORMAT_FLOAT",
-      "id": 134,
-      "intq": {},
-      "is_param": true,
-      "mpool_id": 1,
-      "name": "_layer2_Gemm_output_0_bias_array",
-      "nbits": 32,
-      "offset_start": 11008,
-      "qmn": {},
-      "shape": [
-        32
-      ],
-      "shape_map": [
-        "CH"
-      ],
-      "size_bytes": 128
-    },
-    {
-      "alignment": 4,
-      "batch": 0,
-      "channel_first": true,
-      "channel_last": true,
-      "epochs": {
-        "end": 10,
-        "start": 7
-      },
-      "flags": "STAI_FLAG_PREALLOCATED|STAI_FLAG_ACTIVATIONS",
-      "format": "STAI_FORMAT_FLOAT",
-      "id": 117,
-      "intq": {},
-      "is_param": false,
-      "mpool_id": 0,
-      "name": "_layer2_Gemm_output_0_output_array",
-      "nbits": 32,
-      "offset_start": 0,
-      "qmn": {},
-      "shape": [
-        32
-      ],
-      "shape_map": [
-        "CH"
-      ],
-      "size_bytes": 128
-    },
-    {
-      "alignment": 4,
-      "batch": 0,
-      "channel_first": true,
-      "channel_last": true,
-      "epochs": {
-        "end": 1,
-        "start": 0
-      },
-      "flags": "STAI_FLAG_WEIGHTS|STAI_FLAG_CONST|STAI_FLAG_PREALLOCATED",
-      "format": "STAI_FORMAT_FLOAT",
-      "id": 131,
-      "intq": {},
-      "is_param": true,
-      "mpool_id": 1,
-      "name": "_layer2_Gemm_output_0_weights_array",
-      "nbits": 32,
-      "offset_start": 2816,
-      "qmn": {},
-      "shape": [
-        32,
-        64
-      ],
-      "shape_map": [
-        "CH",
-        "CH_IN"
-      ],
-      "size_bytes": 8192
-    },
-    {
-      "alignment": 4,
-      "batch": 0,
-      "channel_first": true,
-      "channel_last": true,
-      "epochs": {
-        "end": 1,
-        "start": 0
-      },
-      "flags": "STAI_FLAG_WEIGHTS|STAI_FLAG_CONST|STAI_FLAG_PREALLOCATED",
-      "format": "STAI_FORMAT_FLOAT",
-      "id": 140,
-      "intq": {},
-      "is_param": true,
-      "mpool_id": 1,
-      "name": "_layer3_Gemm_output_0_bias_array",
-      "nbits": 32,
-      "offset_start": 11264,
-      "qmn": {},
-      "shape": [
-        1
-      ],
-      "shape_map": [
-        "CH"
-      ],
-      "size_bytes": 4
-    },
-    {
-      "alignment": 4,
-      "batch": 0,
-      "channel_first": true,
-      "channel_last": true,
-      "epochs": {
-        "end": 14,
-        "start": 11
-      },
-      "flags": "STAI_FLAG_PREALLOCATED|STAI_FLAG_ACTIVATIONS",
-      "format": "STAI_FORMAT_FLOAT",
-      "id": 121,
-      "intq": {},
-      "is_param": false,
-      "mpool_id": 0,
-      "name": "_layer3_Gemm_output_0_output_array",
-      "nbits": 32,
-      "offset_start": 0,
-      "qmn": {},
-      "shape": [
-        1
-      ],
-      "shape_map": [
-        "CH"
-      ],
-      "size_bytes": 4
-    },
-    {
-      "alignment": 4,
-      "batch": 0,
-      "channel_first": true,
-      "channel_last": true,
-      "epochs": {
-        "end": 1,
-        "start": 0
-      },
-      "flags": "STAI_FLAG_WEIGHTS|STAI_FLAG_CONST|STAI_FLAG_PREALLOCATED",
-      "format": "STAI_FORMAT_FLOAT",
-      "id": 137,
-      "intq": {},
-      "is_param": true,
-      "mpool_id": 1,
-      "name": "_layer3_Gemm_output_0_weights_array",
-      "nbits": 32,
-      "offset_start": 11136,
-      "qmn": {},
       "shape": [
         1,
         32
       ],
-      "shape_map": [
-        "CH",
-        "CH_IN"
-      ],
+      "shape_map": [],
       "size_bytes": 128
     },
     {
-      "alignment": 4,
-      "batch": 0,
+      "alignment": 1,
+      "batch": 1,
       "channel_first": true,
       "channel_last": true,
       "epochs": {
-        "end": 15,
-        "start": 13
+        "end": 12,
+        "start": 8
       },
-      "flags": "STAI_FLAG_OUTPUTS|STAI_FLAG_PREALLOCATED|STAI_FLAG_ACTIVATIONS",
+      "flags": "",
       "format": "STAI_FORMAT_FLOAT",
-      "id": 123,
-      "intq": {},
+      "id": 12,
       "is_param": false,
-      "mpool_id": 0,
-      "name": "node_12_output_array",
+      "mpool_id": 2,
+      "name": "Relu_4_out_0",
       "nbits": 32,
-      "offset_start": 4,
-      "qmn": {},
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 0
+      },
       "shape": [
+        1,
+        32
+      ],
+      "shape_map": [],
+      "size_bytes": 128
+    },
+    {
+      "alignment": 1,
+      "batch": 32,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 12,
+        "start": 8
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 13,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Gemm_5_reshape_x_14",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        1,
+        32,
+        1,
         1
       ],
-      "shape_map": [
-        "CH"
+      "shape_map": [],
+      "size_bytes": 128
+    },
+    {
+      "alignment": 1,
+      "batch": 1,
+      "channel_first": true,
+      "channel_last": true,
+      "epochs": {
+        "end": 13,
+        "start": 12
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 14,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Gemm_5_conv_16_in",
+      "nbits": 32,
+      "offset_start": 128,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 0
+      },
+      "shape": [
+        1,
+        1,
+        1,
+        1
       ],
+      "shape_map": [],
       "size_bytes": 4
     },
     {
-      "alignment": 4,
-      "batch": 0,
+      "alignment": 1,
+      "batch": 1,
       "channel_first": true,
       "channel_last": true,
       "epochs": {
-        "end": 4,
-        "start": 2
+        "end": 16,
+        "start": 13
       },
-      "flags": "STAI_FLAG_INPUTS|STAI_FLAG_PREALLOCATED|STAI_FLAG_ACTIVATIONS",
+      "flags": "",
       "format": "STAI_FORMAT_FLOAT",
-      "id": 111,
-      "intq": {},
+      "id": 15,
       "is_param": false,
-      "mpool_id": 0,
-      "name": "onnxGemm_0_output_array",
+      "mpool_id": 2,
+      "name": "Gemm_5_conv_16",
       "nbits": 32,
-      "offset_start": 88,
-      "qmn": {},
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 0
+      },
       "shape": [
-        10
+        1,
+        1,
+        1,
+        1
       ],
-      "shape_map": [
-        "CH"
+      "shape_map": [],
+      "size_bytes": 4
+    },
+    {
+      "alignment": 1,
+      "batch": 1,
+      "channel_first": true,
+      "channel_last": true,
+      "epochs": {
+        "end": 16,
+        "start": 13
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 16,
+      "is_param": false,
+      "mpool_id": 2,
+      "name": "Gemm_5_out_0",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        1,
+        1
       ],
-      "size_bytes": 40
+      "shape_map": [],
+      "size_bytes": 4
+    },
+    {
+      "alignment": 1,
+      "batch": 10,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 16,
+        "start": 0
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 17,
+      "is_param": true,
+      "mpool_id": 9,
+      "name": "Gemm_1_weights_transposed_3",
+      "nbits": 32,
+      "offset_start": 8192,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        64,
+        10,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 2560
+    },
+    {
+      "alignment": 1,
+      "batch": 64,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 16,
+        "start": 0
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 18,
+      "is_param": true,
+      "mpool_id": 9,
+      "name": "Gemm_3_weights_transposed_9",
+      "nbits": 32,
+      "offset_start": 0,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 8192
+    },
+    {
+      "alignment": 1,
+      "batch": 32,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 16,
+        "start": 0
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 19,
+      "is_param": true,
+      "mpool_id": 9,
+      "name": "Gemm_5_weights_transposed_15",
+      "nbits": 32,
+      "offset_start": 11008,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 128
+    },
+    {
+      "alignment": 1,
+      "batch": 64,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 16,
+        "start": 0
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 20,
+      "is_param": true,
+      "mpool_id": 9,
+      "name": "Gemm_1_bias_copy19",
+      "nbits": 32,
+      "offset_start": 10752,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        64,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 256
+    },
+    {
+      "alignment": 1,
+      "batch": 32,
+      "channel_first": false,
+      "channel_last": true,
+      "epochs": {
+        "end": 16,
+        "start": 0
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 21,
+      "is_param": true,
+      "mpool_id": 9,
+      "name": "Gemm_3_bias_copy21",
+      "nbits": 32,
+      "offset_start": 11136,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        32,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 128
+    },
+    {
+      "alignment": 1,
+      "batch": 1,
+      "channel_first": true,
+      "channel_last": true,
+      "epochs": {
+        "end": 16,
+        "start": 0
+      },
+      "flags": "",
+      "format": "STAI_FORMAT_FLOAT",
+      "id": 22,
+      "is_param": true,
+      "mpool_id": 9,
+      "name": "Gemm_5_bias_copy23",
+      "nbits": 32,
+      "offset_start": 11264,
+      "qmn": {
+        "m": 0,
+        "n": 0,
+        "sign": 1
+      },
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "shape_map": [],
+      "size_bytes": 4
     }
   ],
   "environment": {
     "generated_model": {
-      "generated_time": "2025-03-06T11:53:44+0100",
+      "generated_time": "2025-03-06 14:32:57",
       "model_files": [
         {
-          "name": "network_data_params.h",
-          "signature": "0xd6946323c749f3929c60e4ef61e9770f"
-        },
-        {
-          "name": "network_data_params.c",
-          "signature": "0xe1b98b1c6f144261e27cbc4cd78cb194"
-        },
-        {
-          "name": "network_data.h",
-          "signature": "0x1594b30c191a85a6985e6a2ac37294d2"
-        },
-        {
-          "name": "network_data.c",
-          "signature": "0xc58c930aff2f1347c814fd6ca5acb75d"
-        },
-        {
-          "name": "network_config.h",
-          "signature": "0xb3d42e996559e14943ba6954334dc243"
-        },
-        {
-          "name": "network.h",
-          "signature": "0xd1a1f8fb9a01913108baeb0a684184d2"
-        },
-        {
-          "name": "network.c",
-          "signature": "0xede722d9c2b1ca34be7d77c3f4fff788"
+          "name": "network",
+          "signature": ""
         }
       ],
-      "name": "network"
+      "n_params": 0,
+      "name": "Default",
+      "size": 0,
+      "type": ""
     },
-    "network_signature": "0xcedb6a85a43d4f69",
+    "network_signature": "",
+    "target": "",
     "test_name": "",
     "tools": [
       {
-        "arguments": "generate --target stm32n6 --name network -m C:/Users/noaht/OneDrive/school/KTH/courses/ongoing/IA150X Examensarbete/code/test/snn_model.onnx --compression none --verbosity 1 --workspace C:/Users/noaht/AppData/Local/Temp/mxAI_workspace5039262498212001062754495353424900 --output C:/Users/noaht/.stm32cubemx/network_output",
-        "environment": [
-          "STATS_TYPE=X-CUBE-AI"
-        ],
+        "arguments": "generate --target stm32n6 --name network -m C:/Users/noaht/OneDrive/school/KTH/courses/ongoing/IA150X Examensarbete/code/test/snn_model.onnx --st-neural-art n6-allmems-O3@C:/Users/noaht/STM32Cube/Repository/Packs/STMicroelectronics/X-CUBE-AI/10.0.0/scripts/N6_scripts/user_neuralart.json --workspace C:/Users/noaht/AppData/Local/Temp/mxAI_workspace513480714218100722356781876297198 --output C:/Users/noaht/.stm32cubemx/network_output",
+        "environment": [],
         "input_model": {
+          "generated_time": "",
           "model_files": [
             {
               "name": "snn_model.onnx",
               "signature": "0xd833ef90458d1be6bedb0d9de7f1946a"
             }
           ],
-          "n_params": 2817,
+          "n_params": 0,
           "name": "snn_model",
-          "size": 11268,
-          "type": "onnx"
+          "size": 0,
+          "type": ""
         },
         "name": "ST.EdgeAI.Core",
         "version": "2.0.0-20049"
+      },
+      {
+        "arguments": " -i C:\\Users\\noaht\\.stm32cubemx\\network_output\\snn_model_OE_3_1_0.onnx --json-quant-file C:\\Users\\noaht\\.stm32cubemx\\network_output\\snn_model_OE_3_1_0_Q.json -g network.c --load-mdesc C:\\Users\\noaht\\STM32Cube\\Repository\\Packs\\STMicroelectronics\\X-CUBE-AI\\10.0.0\\Utilities\\configs\\stm32n6.mdesc --load-mpool C:\\Users\\noaht\\STM32Cube\\Repository\\Packs\\STMicroelectronics\\X-CUBE-AI\\10.0.0\\scripts\\N6_scripts\\my_mpools\\stm32n6.mpool --save-mpool-file C:\\Users\\noaht\\AppData\\Local\\Temp\\mxAI_workspace513480714218100722356781876297198\\neural_art__network\\stm32n6.mpool --out-dir-prefix C:\\Users\\noaht\\AppData\\Local\\Temp\\mxAI_workspace513480714218100722356781876297198\\neural_art__network/ --optimization 3 --all-buffers-info --mvei --no-hw-sw-parallelism --cache-maintenance --Oalt-sched --native-float --enable-virtual-mem-pools --Omax-ca-pipe 4 --Oshuffle-dma --Ocache-opt --Os --output-info-file c_info.json",
+        "environment": [],
+        "input_model": {
+          "generated_time": "2025-03-06T14:32:56+0100",
+          "model_files": [
+            {
+              "name": "snn_model_OE_3_1_0.onnx",
+              "signature": "0x0c4089fb274803065656aa06342af471"
+            }
+          ],
+          "n_params": 0,
+          "name": "network",
+          "size": 0,
+          "type": ""
+        },
+        "name": "ATONN Compiler",
+        "version": "1.0.0-16"
       }
     ]
   },
@@ -422,330 +728,2944 @@
     {
       "edges": [
         {
-          "buffer": 113,
-          "edge_kind": "EDGE_MEMORY",
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
           "end": {
-            "node_id": 8,
+            "node_id": 9,
             "port": 0
           },
-          "id": 0,
-          "name": "n7-p0_n8-p0",
+          "id": 1,
+          "name": "epochdep_0_1",
+          "start": {
+            "node_id": 1,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 11,
+            "port": 0
+          },
+          "id": 2,
+          "name": "epochdep_1_2",
+          "start": {
+            "node_id": 9,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 13,
+            "port": 0
+          },
+          "id": 3,
+          "name": "epochdep_2_3",
+          "start": {
+            "node_id": 11,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 15,
+            "port": 0
+          },
+          "id": 4,
+          "name": "epochdep_3_4",
+          "start": {
+            "node_id": 13,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 17,
+            "port": 0
+          },
+          "id": 5,
+          "name": "epochdep_4_5",
+          "start": {
+            "node_id": 15,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 19,
+            "port": 0
+          },
+          "id": 6,
+          "name": "epochdep_5_6",
+          "start": {
+            "node_id": 17,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 21,
+            "port": 0
+          },
+          "id": 7,
+          "name": "epochdep_6_7",
+          "start": {
+            "node_id": 19,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 23,
+            "port": 0
+          },
+          "id": 8,
+          "name": "epochdep_7_8",
+          "start": {
+            "node_id": 21,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 25,
+            "port": 0
+          },
+          "id": 9,
+          "name": "epochdep_8_9",
+          "start": {
+            "node_id": 23,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 27,
+            "port": 0
+          },
+          "id": 10,
+          "name": "epochdep_9_10",
+          "start": {
+            "node_id": 25,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 29,
+            "port": 0
+          },
+          "id": 11,
+          "name": "epochdep_10_11",
+          "start": {
+            "node_id": 27,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 31,
+            "port": 0
+          },
+          "id": 12,
+          "name": "epochdep_11_12",
+          "start": {
+            "node_id": 29,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 33,
+            "port": 0
+          },
+          "id": 13,
+          "name": "epochdep_12_13",
+          "start": {
+            "node_id": 31,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 35,
+            "port": 0
+          },
+          "id": 14,
+          "name": "epochdep_13_14",
+          "start": {
+            "node_id": 33,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 37,
+            "port": 0
+          },
+          "id": 15,
+          "name": "epochdep_14_15",
+          "start": {
+            "node_id": 35,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 0,
+          "edge_kind": "EDGE_FLOW",
+          "end": {
+            "node_id": 39,
+            "port": 0
+          },
+          "id": 16,
+          "name": "epochdep_15_16",
+          "start": {
+            "node_id": 37,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 3,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 12,
+            "port": 0
+          },
+          "id": 17,
+          "name": "Gemm_1_reshape_x_2_FLOAT__1_10_1_1__",
+          "start": {
+            "node_id": 10,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 17,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 12,
+            "port": 0
+          },
+          "id": 18,
+          "name": "Gemm_1_weights_transposed_3_FLOAT__64_10_1_1__",
+          "start": {
+            "node_id": 3,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 4,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 14,
+            "port": 0
+          },
+          "id": 19,
+          "name": "Gemm_1_conv_4_in_FLOAT__1_64_1_1__",
+          "start": {
+            "node_id": 12,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 20,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 14,
+            "port": 0
+          },
+          "id": 20,
+          "name": "Gemm_1_bias_copy19_FLOAT__64_1_1__",
+          "start": {
+            "node_id": 8,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 5,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 16,
+            "port": 0
+          },
+          "id": 21,
+          "name": "Gemm_1_conv_4_FLOAT__1_64_1_1__",
+          "start": {
+            "node_id": 14,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 6,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 18,
+            "port": 0
+          },
+          "id": 22,
+          "name": "Gemm_1_out_0_FLOAT__1_64__",
+          "start": {
+            "node_id": 16,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 8,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 22,
+            "port": 0
+          },
+          "id": 23,
+          "name": "Gemm_3_reshape_x_8_FLOAT__1_64_1_1__",
+          "start": {
+            "node_id": 20,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 18,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 22,
+            "port": 0
+          },
+          "id": 24,
+          "name": "Gemm_3_weights_transposed_9_FLOAT__32_64_1_1__",
+          "start": {
+            "node_id": 2,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 9,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 24,
+            "port": 0
+          },
+          "id": 25,
+          "name": "Gemm_3_conv_10_in_FLOAT__1_32_1_1__",
+          "start": {
+            "node_id": 22,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 21,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 24,
+            "port": 0
+          },
+          "id": 26,
+          "name": "Gemm_3_bias_copy21_FLOAT__32_1_1__",
           "start": {
             "node_id": 7,
             "port": 0
           }
         },
         {
-          "buffer": 115,
+          "attributes": {},
+          "buffer": 10,
           "edge_kind": "EDGE_MEMORY",
           "end": {
-            "node_id": 9,
+            "node_id": 26,
             "port": 0
           },
-          "id": 1,
-          "name": "n8-p0_n9-p0",
+          "id": 27,
+          "name": "Gemm_3_conv_10_FLOAT__1_32_1_1__",
           "start": {
-            "node_id": 8,
+            "node_id": 24,
             "port": 0
           }
         },
         {
-          "buffer": 117,
+          "attributes": {},
+          "buffer": 11,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 28,
+            "port": 0
+          },
+          "id": 28,
+          "name": "Gemm_3_out_0_FLOAT__1_32__",
+          "start": {
+            "node_id": 26,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 13,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 32,
+            "port": 0
+          },
+          "id": 29,
+          "name": "Gemm_5_reshape_x_14_FLOAT__1_32_1_1__",
+          "start": {
+            "node_id": 30,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 19,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 32,
+            "port": 0
+          },
+          "id": 30,
+          "name": "Gemm_5_weights_transposed_15_FLOAT__1_32_1_1__",
+          "start": {
+            "node_id": 4,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 14,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 34,
+            "port": 0
+          },
+          "id": 31,
+          "name": "Gemm_5_conv_16_in_FLOAT__1_1_1_1__",
+          "start": {
+            "node_id": 32,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 22,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 34,
+            "port": 0
+          },
+          "id": 32,
+          "name": "Gemm_5_bias_copy23_FLOAT__1_1_1__",
+          "start": {
+            "node_id": 6,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 15,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 36,
+            "port": 0
+          },
+          "id": 33,
+          "name": "Gemm_5_conv_16_FLOAT__1_1_1_1__",
+          "start": {
+            "node_id": 34,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 16,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 38,
+            "port": 0
+          },
+          "id": 34,
+          "name": "Gemm_5_out_0_FLOAT__1_1__",
+          "start": {
+            "node_id": 36,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 2,
+          "edge_kind": "EDGE_MEMORY",
+          "end": {
+            "node_id": 40,
+            "port": 0
+          },
+          "id": 35,
+          "name": "Sigmoid_6_out_0_FLOAT__1_1__",
+          "start": {
+            "node_id": 38,
+            "port": 0
+          }
+        },
+        {
+          "attributes": {},
+          "buffer": 1,
           "edge_kind": "EDGE_MEMORY",
           "end": {
             "node_id": 10,
             "port": 0
           },
-          "id": 2,
-          "name": "n9-p0_n10-p0",
+          "id": 36,
+          "name": "Input_0_out_0_FLOAT__1_10__",
           "start": {
-            "node_id": 9,
+            "node_id": 5,
             "port": 0
           }
         },
         {
-          "buffer": 119,
+          "attributes": {},
+          "buffer": 7,
           "edge_kind": "EDGE_MEMORY",
           "end": {
-            "node_id": 11,
+            "node_id": 20,
             "port": 0
           },
-          "id": 3,
-          "name": "n10-p0_n11-p0",
+          "id": 37,
+          "name": "Relu_2_out_0_FLOAT__1_64__",
           "start": {
-            "node_id": 10,
+            "node_id": 18,
             "port": 0
           }
         },
         {
-          "buffer": 121,
+          "attributes": {},
+          "buffer": 12,
           "edge_kind": "EDGE_MEMORY",
           "end": {
-            "node_id": 12,
+            "node_id": 30,
             "port": 0
           },
-          "id": 4,
-          "name": "n11-p0_n12-p0",
+          "id": 38,
+          "name": "Relu_4_out_0_FLOAT__1_32__",
           "start": {
-            "node_id": 11,
+            "node_id": 28,
             "port": 0
           }
         }
       ],
-      "id": 0,
+      "id": 1,
       "inputs": [
-        111
+        1
       ],
-      "name": "snn_model",
+      "name": "Default",
       "nodes": [
         {
-          "attributes": {
-            "num_units": "64",
-            "use_bias": "True"
-          },
-          "description": "Dense",
-          "id": 7,
-          "inputs": [
-            111,
-            125,
-            128
-          ],
-          "macc": 704,
-          "mapping": "NODE_SW",
-          "name": "_layer1_Gemm_output_0",
-          "original_nodes": [
-            "1"
-          ],
-          "outputs": [
-            113
-          ],
+          "attributes": {},
+          "description": "",
+          "id": 1,
+          "inputs": [],
+          "macc": 0,
+          "mapping": "NODE_HW",
+          "name": "epoch_0",
+          "original_nodes": [],
+          "outputs": [],
           "scratchs": [],
-          "subgraph_nodes": [],
-          "sw_functions": [
-            "forward_dense"
-          ]
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Param",
+              "id": 2,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_3_weights_transposed_9",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            },
+            {
+              "attributes": {},
+              "description": "Node kind=Param",
+              "id": 3,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_1_weights_transposed_3",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            },
+            {
+              "attributes": {},
+              "description": "Node kind=Param",
+              "id": 4,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_5_weights_transposed_15",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            },
+            {
+              "attributes": {},
+              "description": "Node kind=Param",
+              "id": 5,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Input_0_out_0",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            },
+            {
+              "attributes": {},
+              "description": "Node kind=Param",
+              "id": 6,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_5_bias_copy23",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            },
+            {
+              "attributes": {},
+              "description": "Node kind=Param",
+              "id": 7,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_3_bias_copy21",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            },
+            {
+              "attributes": {},
+              "description": "Node kind=Param",
+              "id": 8,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_1_bias_copy19",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
         },
         {
-          "attributes": {
-            "nonlinearity": "relu",
-            "with_batch_size": "False"
-          },
-          "description": "Nonlinearity",
-          "id": 8,
-          "inputs": [
-            113
-          ],
-          "macc": 64,
-          "mapping": "NODE_SW",
-          "name": "_Relu_output_0",
-          "original_nodes": [
-            "2"
-          ],
-          "outputs": [
-            115
-          ],
-          "scratchs": [],
-          "subgraph_nodes": [],
-          "sw_functions": [
-            "forward_relu"
-          ]
-        },
-        {
-          "attributes": {
-            "num_units": "32",
-            "use_bias": "True"
-          },
-          "description": "Dense",
+          "attributes": {},
+          "description": "",
           "id": 9,
-          "inputs": [
-            115,
-            131,
-            134
-          ],
-          "macc": 2080,
-          "mapping": "NODE_SW",
-          "name": "_layer2_Gemm_output_0",
-          "original_nodes": [
-            "3"
-          ],
-          "outputs": [
-            117
-          ],
+          "inputs": [],
+          "macc": 0,
+          "mapping": "NODE_HW",
+          "name": "epoch_1",
+          "original_nodes": [],
+          "outputs": [],
           "scratchs": [],
-          "subgraph_nodes": [],
-          "sw_functions": [
-            "forward_dense"
-          ]
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Reshape",
+              "id": 10,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_1_reshape_x_2",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
         },
         {
-          "attributes": {
-            "nonlinearity": "relu",
-            "with_batch_size": "False"
-          },
-          "description": "Nonlinearity",
-          "id": 10,
-          "inputs": [
-            117
-          ],
-          "macc": 32,
-          "mapping": "NODE_SW",
-          "name": "_Relu_1_output_0",
-          "original_nodes": [
-            "4"
-          ],
-          "outputs": [
-            119
-          ],
-          "scratchs": [],
-          "subgraph_nodes": [],
-          "sw_functions": [
-            "forward_relu"
-          ]
-        },
-        {
-          "attributes": {
-            "num_units": "1",
-            "use_bias": "True"
-          },
-          "description": "Dense",
+          "attributes": {},
+          "description": "",
           "id": 11,
           "inputs": [
-            119,
-            137,
-            140
+            3,
+            17
           ],
-          "macc": 33,
+          "macc": 0,
           "mapping": "NODE_SW",
-          "name": "_layer3_Gemm_output_0",
-          "original_nodes": [
-            "5"
-          ],
+          "name": "epoch_2",
+          "original_nodes": [],
           "outputs": [
-            121
+            4
           ],
           "scratchs": [],
-          "subgraph_nodes": [],
-          "sw_functions": [
-            "forward_dense"
-          ]
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Conv",
+              "id": 12,
+              "inputs": [
+                3,
+                17
+              ],
+              "macc": 0,
+              "mapping": "NODE_SW",
+              "name": "Gemm_1_conv_4",
+              "original_nodes": [],
+              "outputs": [
+                4
+              ],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
         },
         {
-          "attributes": {
-            "nonlinearity": "sigmoid",
-            "with_batch_size": "False"
-          },
-          "description": "Nonlinearity",
-          "id": 12,
+          "attributes": {},
+          "description": "",
+          "id": 13,
           "inputs": [
-            121
+            4,
+            20
           ],
-          "macc": 10,
+          "macc": 0,
           "mapping": "NODE_SW",
-          "name": "node_12",
-          "original_nodes": [
-            "6"
-          ],
+          "name": "epoch_3",
+          "original_nodes": [],
           "outputs": [
-            123
+            5
           ],
           "scratchs": [],
-          "subgraph_nodes": [],
-          "sw_functions": [
-            "forward_sigmoid"
-          ]
-        }
-      ],
-      "original_inputs": [
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Add",
+              "id": 14,
+              "inputs": [
+                4,
+                20
+              ],
+              "macc": 0,
+              "mapping": "NODE_SW",
+              "name": "Gemm_1_conv_4_addbias18",
+              "original_nodes": [],
+              "outputs": [
+                5
+              ],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
         {
-          "onnxGemm_0": {
-            "data_type": "float32",
-            "shape": "(BATCH: 1, CH: 10)"
-          }
-        }
-      ],
-      "original_outputs": [
+          "attributes": {},
+          "description": "",
+          "id": 15,
+          "inputs": [],
+          "macc": 0,
+          "mapping": "NODE_HW",
+          "name": "epoch_4",
+          "original_nodes": [],
+          "outputs": [],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Reshape",
+              "id": 16,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_1_squeeze_y_5",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
         {
-          "node_12": {
-            "data_type": "float32",
-            "shape": "(BATCH: 1, CH: 1)"
-          }
+          "attributes": {},
+          "description": "",
+          "id": 17,
+          "inputs": [
+            6
+          ],
+          "macc": 0,
+          "mapping": "NODE_SW",
+          "name": "epoch_5",
+          "original_nodes": [],
+          "outputs": [
+            7
+          ],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Relu",
+              "id": 18,
+              "inputs": [
+                6
+              ],
+              "macc": 0,
+              "mapping": "NODE_SW",
+              "name": "Relu_2",
+              "original_nodes": [],
+              "outputs": [
+                7
+              ],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 19,
+          "inputs": [],
+          "macc": 0,
+          "mapping": "NODE_HW",
+          "name": "epoch_6",
+          "original_nodes": [],
+          "outputs": [],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Reshape",
+              "id": 20,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_3_reshape_x_8",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 21,
+          "inputs": [
+            8,
+            18
+          ],
+          "macc": 0,
+          "mapping": "NODE_SW",
+          "name": "epoch_7",
+          "original_nodes": [],
+          "outputs": [
+            9
+          ],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Conv",
+              "id": 22,
+              "inputs": [
+                8,
+                18
+              ],
+              "macc": 0,
+              "mapping": "NODE_SW",
+              "name": "Gemm_3_conv_10",
+              "original_nodes": [],
+              "outputs": [
+                9
+              ],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 23,
+          "inputs": [
+            9,
+            21
+          ],
+          "macc": 0,
+          "mapping": "NODE_SW",
+          "name": "epoch_8",
+          "original_nodes": [],
+          "outputs": [
+            10
+          ],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Add",
+              "id": 24,
+              "inputs": [
+                9,
+                21
+              ],
+              "macc": 0,
+              "mapping": "NODE_SW",
+              "name": "Gemm_3_conv_10_addbias20",
+              "original_nodes": [],
+              "outputs": [
+                10
+              ],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 25,
+          "inputs": [],
+          "macc": 0,
+          "mapping": "NODE_HW",
+          "name": "epoch_9",
+          "original_nodes": [],
+          "outputs": [],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Reshape",
+              "id": 26,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_3_squeeze_y_11",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 27,
+          "inputs": [
+            11
+          ],
+          "macc": 0,
+          "mapping": "NODE_SW",
+          "name": "epoch_10",
+          "original_nodes": [],
+          "outputs": [
+            12
+          ],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Relu",
+              "id": 28,
+              "inputs": [
+                11
+              ],
+              "macc": 0,
+              "mapping": "NODE_SW",
+              "name": "Relu_4",
+              "original_nodes": [],
+              "outputs": [
+                12
+              ],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 29,
+          "inputs": [],
+          "macc": 0,
+          "mapping": "NODE_HW",
+          "name": "epoch_11",
+          "original_nodes": [],
+          "outputs": [],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Reshape",
+              "id": 30,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_5_reshape_x_14",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 31,
+          "inputs": [
+            13,
+            19
+          ],
+          "macc": 0,
+          "mapping": "NODE_SW",
+          "name": "epoch_12",
+          "original_nodes": [],
+          "outputs": [
+            14
+          ],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Conv",
+              "id": 32,
+              "inputs": [
+                13,
+                19
+              ],
+              "macc": 0,
+              "mapping": "NODE_SW",
+              "name": "Gemm_5_conv_16",
+              "original_nodes": [],
+              "outputs": [
+                14
+              ],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 33,
+          "inputs": [
+            14,
+            22
+          ],
+          "macc": 0,
+          "mapping": "NODE_SW",
+          "name": "epoch_13",
+          "original_nodes": [],
+          "outputs": [
+            15
+          ],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Add",
+              "id": 34,
+              "inputs": [
+                14,
+                22
+              ],
+              "macc": 0,
+              "mapping": "NODE_SW",
+              "name": "Gemm_5_conv_16_addbias22",
+              "original_nodes": [],
+              "outputs": [
+                15
+              ],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 35,
+          "inputs": [],
+          "macc": 0,
+          "mapping": "NODE_HW",
+          "name": "epoch_14",
+          "original_nodes": [],
+          "outputs": [],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Reshape",
+              "id": 36,
+              "inputs": [],
+              "macc": 0,
+              "mapping": "NODE_HW",
+              "name": "Gemm_5_squeeze_y_17",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 37,
+          "inputs": [
+            16
+          ],
+          "macc": 0,
+          "mapping": "NODE_SW",
+          "name": "epoch_15",
+          "original_nodes": [],
+          "outputs": [
+            2
+          ],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Sigmoid",
+              "id": 38,
+              "inputs": [
+                16
+              ],
+              "macc": 0,
+              "mapping": "NODE_SW",
+              "name": "Sigmoid_6",
+              "original_nodes": [],
+              "outputs": [
+                2
+              ],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
+        },
+        {
+          "attributes": {},
+          "description": "",
+          "id": 39,
+          "inputs": [
+            2
+          ],
+          "macc": 0,
+          "mapping": "NODE_SW",
+          "name": "epoch_16",
+          "original_nodes": [],
+          "outputs": [],
+          "scratchs": [],
+          "subgraph_nodes": [
+            {
+              "attributes": {},
+              "description": "Node kind=Return",
+              "id": 40,
+              "inputs": [
+                2
+              ],
+              "macc": 0,
+              "mapping": "NODE_SW",
+              "name": "__NN__RETURN__",
+              "original_nodes": [],
+              "outputs": [],
+              "scratchs": [],
+              "subgraph_nodes": [],
+              "sw_functions": []
+            }
+          ],
+          "sw_functions": []
         }
       ],
+      "original_inputs": {},
+      "original_outputs": {},
       "outputs": [
-        123
+        2
       ]
     }
   ],
   "json_schema_version": "2.0",
+  "memory_accesses": [
+    {
+      "mpool_id": 8,
+      "node_id": 1,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 1,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 1,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 1,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 1,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 1,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 1,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 1,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 1,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 9,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 9,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 9,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 9,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 9,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 9,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 9,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 9,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 9,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 11,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 11,
+      "read_cycles": 3840,
+      "reads": 2560,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 11,
+      "read_cycles": 1,
+      "reads": 40,
+      "write_cycles": 10,
+      "writes": 256
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 11,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 11,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 11,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 11,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 11,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 11,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 13,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 13,
+      "read_cycles": 384,
+      "reads": 256,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 13,
+      "read_cycles": 10,
+      "reads": 256,
+      "write_cycles": 10,
+      "writes": 256
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 13,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 13,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 13,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 13,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 13,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 13,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 15,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 15,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 15,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 15,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 15,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 15,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 15,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 15,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 15,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 17,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 17,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 17,
+      "read_cycles": 10,
+      "reads": 256,
+      "write_cycles": 10,
+      "writes": 256
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 17,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 17,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 17,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 17,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 17,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 17,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 19,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 19,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 19,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 19,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 19,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 19,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 19,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 19,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 19,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 21,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 21,
+      "read_cycles": 12288,
+      "reads": 8192,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 21,
+      "read_cycles": 10,
+      "reads": 256,
+      "write_cycles": 5,
+      "writes": 128
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 21,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 21,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 21,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 21,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 21,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 21,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 23,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 23,
+      "read_cycles": 192,
+      "reads": 128,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 23,
+      "read_cycles": 5,
+      "reads": 128,
+      "write_cycles": 5,
+      "writes": 128
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 23,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 23,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 23,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 23,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 23,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 23,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 25,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 25,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 25,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 25,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 25,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 25,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 25,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 25,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 25,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 27,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 27,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 27,
+      "read_cycles": 5,
+      "reads": 128,
+      "write_cycles": 5,
+      "writes": 128
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 27,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 27,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 27,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 27,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 27,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 27,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 29,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 29,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 29,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 29,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 29,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 29,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 29,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 29,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 29,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 31,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 31,
+      "read_cycles": 192,
+      "reads": 128,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 31,
+      "read_cycles": 5,
+      "reads": 128,
+      "write_cycles": 0,
+      "writes": 4
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 31,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 31,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 31,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 31,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 31,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 31,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 33,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 33,
+      "read_cycles": 6,
+      "reads": 4,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 33,
+      "read_cycles": 0,
+      "reads": 4,
+      "write_cycles": 0,
+      "writes": 4
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 33,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 33,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 33,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 33,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 33,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 33,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 35,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 35,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 35,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 35,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 35,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 35,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 35,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 35,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 35,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 37,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 37,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 37,
+      "read_cycles": 0,
+      "reads": 4,
+      "write_cycles": 0,
+      "writes": 4
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 37,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 37,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 37,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 37,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 37,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 37,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 8,
+      "node_id": 39,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 9,
+      "node_id": 39,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 2,
+      "node_id": 39,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 3,
+      "node_id": 39,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 4,
+      "node_id": 39,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 1,
+      "node_id": 39,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 5,
+      "node_id": 39,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 6,
+      "node_id": 39,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    },
+    {
+      "mpool_id": 7,
+      "node_id": 39,
+      "read_cycles": 0,
+      "reads": 0,
+      "write_cycles": 0,
+      "writes": 0
+    }
+  ],
   "memory_footprint": {
-    "activations": 384,
+    "activations": 512,
     "io": [
-      0,
-      0
+      40,
+      4
     ],
-    "kernel_flash": 10976,
-    "kernel_ram": 1984,
-    "series": "stm32n6",
+    "kernel_flash": 36783,
+    "kernel_ram": 25,
+    "series": "stm32n6npu",
     "toolchain": "arm-none-eabi-gcc (GNU Tools for STM32 12.3.rel1.20240926-1715) 12.3.1 20230626",
-    "toolchain_flash": 646,
-    "toolchain_ram": 0,
+    "toolchain_flash": 13330,
+    "toolchain_ram": 12,
     "weights": 11268
   },
   "memory_pools": [
     {
-      "address": "NULL",
-      "alignment": 4,
+      "address": "875888640",
+      "alignment": 8,
       "attributes": {
+        "burst_max_length": 4294967295,
+        "burst_penalty": 0,
+        "byte_width": 8,
+        "freq_ratio": 1.25,
         "latency": "HIGH",
-        "score": 768,
-        "throughput": "LOW"
+        "read_power": 19.006,
+        "score": 94,
+        "throughput": "HIGH",
+        "use_for_initrs": false,
+        "write_power": 15.79
       },
-      "buffers": [
-        111,
-        113,
-        115,
-        117,
-        119,
-        121,
-        123
-      ],
-      "id": 0,
-      "name": "heap_overlay_pool",
-      "offset_start": 0,
-      "persistent": false,
-      "rights": "ACC_WRITE",
-      "size_bytes": -1,
-      "subpools": [],
-      "used_size_bytes": 384,
-      "user_allocated": false,
-      "virtual": false
-    },
-    {
-      "address": "s_network_weights_array_u64",
-      "alignment": 0,
-      "attributes": {
-        "latency": "UNDEF",
-        "score": 0,
-        "throughput": "UNDEF"
-      },
-      "buffers": [
-        125,
-        128,
-        131,
-        134,
-        137,
-        140
-      ],
+      "buffers": [],
+      "cacheable": "CACHEABLE_UNDEF",
       "id": 1,
-      "name": "weights_array",
+      "name": "npuRAM6",
       "offset_start": 0,
       "persistent": true,
+      "pipelined": "PIPELINED_ON",
+      "rights": "ACC_WRITE",
+      "size_bytes": 458744,
+      "subpools": [],
+      "used_size_bytes": 0,
+      "user_allocated": false
+    },
+    {
+      "address": "875429888",
+      "alignment": 8,
+      "attributes": {
+        "burst_max_length": 4294967295,
+        "burst_penalty": 0,
+        "byte_width": 8,
+        "freq_ratio": 1.25,
+        "latency": "HIGH",
+        "read_power": 18.531,
+        "score": 94,
+        "throughput": "HIGH",
+        "use_for_initrs": false,
+        "write_power": 16.201
+      },
+      "buffers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "cacheable": "CACHEABLE_UNDEF",
+      "id": 2,
+      "name": "npuRAM5",
+      "offset_start": 0,
+      "persistent": true,
+      "pipelined": "PIPELINED_ON",
+      "rights": "ACC_WRITE",
+      "size_bytes": 458752,
+      "subpools": [],
+      "used_size_bytes": 512,
+      "user_allocated": false
+    },
+    {
+      "address": "874971136",
+      "alignment": 8,
+      "attributes": {
+        "burst_max_length": 4294967295,
+        "burst_penalty": 0,
+        "byte_width": 8,
+        "freq_ratio": 1.25,
+        "latency": "HIGH",
+        "read_power": 18.531,
+        "score": 94,
+        "throughput": "HIGH",
+        "use_for_initrs": false,
+        "write_power": 16.201
+      },
+      "buffers": [],
+      "cacheable": "CACHEABLE_UNDEF",
+      "id": 3,
+      "name": "npuRAM4",
+      "offset_start": 0,
+      "persistent": true,
+      "pipelined": "PIPELINED_ON",
+      "rights": "ACC_WRITE",
+      "size_bytes": 458752,
+      "subpools": [],
+      "used_size_bytes": 0,
+      "user_allocated": false
+    },
+    {
+      "address": "874512384",
+      "alignment": 8,
+      "attributes": {
+        "burst_max_length": 4294967295,
+        "burst_penalty": 0,
+        "byte_width": 8,
+        "freq_ratio": 1.25,
+        "latency": "HIGH",
+        "read_power": 18.531,
+        "score": 94,
+        "throughput": "HIGH",
+        "use_for_initrs": false,
+        "write_power": 16.201
+      },
+      "buffers": [],
+      "cacheable": "CACHEABLE_UNDEF",
+      "id": 4,
+      "name": "npuRAM3",
+      "offset_start": 0,
+      "persistent": true,
+      "pipelined": "PIPELINED_ON",
+      "rights": "ACC_WRITE",
+      "size_bytes": 458752,
+      "subpools": [],
+      "used_size_bytes": 0,
+      "user_allocated": false
+    },
+    {
+      "address": "873463808",
+      "alignment": 8,
+      "attributes": {
+        "burst_max_length": 4294967295,
+        "burst_penalty": 0,
+        "byte_width": 8,
+        "freq_ratio": 2.5,
+        "latency": "MID",
+        "read_power": 17.324,
+        "score": 84,
+        "throughput": "MID",
+        "use_for_initrs": false,
+        "write_power": 15.321
+      },
+      "buffers": [],
+      "cacheable": "CACHEABLE_UNDEF",
+      "id": 5,
+      "name": "cpuRAM2",
+      "offset_start": 0,
+      "persistent": true,
+      "pipelined": "PIPELINED_ON",
+      "rights": "ACC_WRITE",
+      "size_bytes": 1048576,
+      "subpools": [],
+      "used_size_bytes": 0,
+      "user_allocated": false
+    },
+    {
+      "address": "872824832",
+      "alignment": 8,
+      "attributes": {
+        "burst_max_length": 4294967295,
+        "burst_penalty": 0,
+        "byte_width": 8,
+        "freq_ratio": 2.5,
+        "latency": "MID",
+        "read_power": 16.616,
+        "score": 84,
+        "throughput": "MID",
+        "use_for_initrs": false,
+        "write_power": 14.522
+      },
+      "buffers": [],
+      "cacheable": "CACHEABLE_UNDEF",
+      "id": 6,
+      "name": "cpuRAM1",
+      "offset_start": 0,
+      "persistent": true,
+      "pipelined": "PIPELINED_ON",
+      "rights": "ACC_WRITE",
+      "size_bytes": 0,
+      "subpools": [],
+      "used_size_bytes": 0,
+      "user_allocated": false
+    },
+    {
+      "address": "872415232",
+      "alignment": 8,
+      "attributes": {
+        "burst_max_length": 4294967295,
+        "burst_penalty": 0,
+        "byte_width": 8,
+        "freq_ratio": 2.5,
+        "latency": "MID",
+        "read_power": 9.381,
+        "score": 84,
+        "throughput": "MID",
+        "use_for_initrs": false,
+        "write_power": 8.569
+      },
+      "buffers": [],
+      "cacheable": "CACHEABLE_UNDEF",
+      "id": 7,
+      "name": "flexMEM",
+      "offset_start": 0,
+      "persistent": true,
+      "pipelined": "PIPELINED_ON",
+      "rights": "ACC_WRITE",
+      "size_bytes": 0,
+      "subpools": [],
+      "used_size_bytes": 0,
+      "user_allocated": false
+    },
+    {
+      "address": "2415919104",
+      "alignment": 8,
+      "attributes": {
+        "burst_max_length": 4294967295,
+        "burst_penalty": 0,
+        "byte_width": 2,
+        "freq_ratio": 5,
+        "latency": "LOW",
+        "read_power": 380,
+        "score": 82,
+        "throughput": "MID",
+        "use_for_initrs": true,
+        "write_power": 340
+      },
+      "buffers": [],
+      "cacheable": "CACHEABLE_ON",
+      "id": 8,
+      "name": "hyperRAM",
+      "offset_start": 0,
+      "persistent": true,
+      "pipelined": "PIPELINED_ON",
+      "rights": "ACC_WRITE",
+      "size_bytes": 33554424,
+      "subpools": [],
+      "used_size_bytes": 0,
+      "user_allocated": false
+    },
+    {
+      "address": "1879048192",
+      "alignment": 8,
+      "attributes": {
+        "burst_max_length": 4294967295,
+        "burst_penalty": 0,
+        "byte_width": 1,
+        "freq_ratio": 6,
+        "latency": "LOW",
+        "read_power": 110,
+        "score": 50,
+        "throughput": "MID",
+        "use_for_initrs": true,
+        "write_power": 400
+      },
+      "buffers": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "cacheable": "CACHEABLE_ON",
+      "id": 9,
+      "name": "octoFlash",
+      "offset_start": 0,
+      "persistent": true,
+      "pipelined": "PIPELINED_ON",
       "rights": "ACC_READ",
-      "size_bytes": -1,
+      "size_bytes": 67108856,
       "subpools": [],
       "used_size_bytes": 11268,
-      "user_allocated": false,
-      "virtual": false
+      "user_allocated": false
+    },
+    {
+      "address": "873463808",
+      "alignment": 8,
+      "attributes": {
+        "burst_max_length": 4294967295,
+        "burst_penalty": 0,
+        "byte_width": 8,
+        "freq_ratio": 2.5,
+        "latency": "MID",
+        "read_power": 19.006,
+        "score": 85,
+        "throughput": "MID",
+        "use_for_initrs": false,
+        "write_power": 16.201
+      },
+      "buffers": [],
+      "cacheable": "CACHEABLE_UNDEF",
+      "id": 10,
+      "name": "cpuRAM2_npuRAM3_npuRAM4_npuRAM5_npuRAM6",
+      "offset_start": 0,
+      "persistent": true,
+      "pipelined": "PIPELINED_ON",
+      "rights": "ACC_WRITE",
+      "size_bytes": 2883576,
+      "subpools": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "used_size_bytes": 1966592,
+      "user_allocated": false
+    }
+  ],
+  "power_estimates": [
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 0,
+      "max_cycles": 0,
+      "node_id": 1,
+      "ops": 0
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 0,
+      "max_cycles": 0,
+      "node_id": 9,
+      "ops": 0
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 714,
+      "max_cycles": 15360,
+      "node_id": 11,
+      "ops": 1280
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 192,
+      "max_cycles": 1536,
+      "node_id": 13,
+      "ops": 64
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 0,
+      "max_cycles": 0,
+      "node_id": 15,
+      "ops": 0
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 128,
+      "max_cycles": 128,
+      "node_id": 17,
+      "ops": 0
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 0,
+      "max_cycles": 0,
+      "node_id": 19,
+      "ops": 0
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 2144,
+      "max_cycles": 49152,
+      "node_id": 21,
+      "ops": 4096
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 96,
+      "max_cycles": 768,
+      "node_id": 23,
+      "ops": 32
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 0,
+      "max_cycles": 0,
+      "node_id": 25,
+      "ops": 0
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 64,
+      "max_cycles": 64,
+      "node_id": 27,
+      "ops": 0
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 0,
+      "max_cycles": 0,
+      "node_id": 29,
+      "ops": 0
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 65,
+      "max_cycles": 768,
+      "node_id": 31,
+      "ops": 64
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 3,
+      "max_cycles": 24,
+      "node_id": 33,
+      "ops": 1
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 0,
+      "max_cycles": 0,
+      "node_id": 35,
+      "ops": 0
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 2,
+      "max_cycles": 2,
+      "node_id": 37,
+      "ops": 0
+    },
+    {
+      "average_acc_power_mw": 0,
+      "average_memory_power_mw": 0,
+      "compute_cycles": 0,
+      "max_cycles": 0,
+      "node_id": 39,
+      "ops": 0
     }
   ]
 }
