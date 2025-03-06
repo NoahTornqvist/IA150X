@@ -1,0 +1,201 @@
+ST Edge AI Core v2.0.0-20049
+Created date          : 2025-03-06 11:53:55
+Parameters            : generate --target stm32n6 --name network -m C:/Users/noaht/OneDrive/school/KTH/courses/ongoing/IA150X Examensarbete/code/test/snn_model.onnx --compression none --verbosity 1 --workspace C:/Users/noaht/AppData/Local/Temp/mxAI_workspace5039262498212001062754495353424900 --output C:/Users/noaht/.stm32cubemx/network_output
+
+Exec/report summary (generate)
+--------------------------------------------------------------------------------------------------------------------------
+model file         :   C:\Users\noaht\OneDrive\school\KTH\courses\ongoing\IA150X Examensarbete\code\test\snn_model.onnx   
+type               :   onnx                                                                                               
+c_name             :   network                                                                                            
+compression        :   none                                                                                               
+options            :   allocate-inputs, allocate-outputs                                                                  
+optimization       :   balanced                                                                                           
+target/series      :   stm32n6                                                                                            
+workspace dir      :   C:\Users\noaht\AppData\Local\Temp\mxAI_workspace5039262498212001062754495353424900                 
+output dir         :   C:\Users\noaht\.stm32cubemx\network_output                                                         
+model_fmt          :   float                                                                                              
+model_name         :   snn_model                                                                                          
+model_hash         :   0xd833ef90458d1be6bedb0d9de7f1946a                                                                 
+params #           :   2,817 items (11.00 KiB)                                                                            
+--------------------------------------------------------------------------------------------------------------------------
+input 1/1          :   'onnxGemm_0', f32(1x10), 40 Bytes, activations                                                     
+output 1/1         :   'node_12', f32(1x1), 4 Bytes, activations                                                          
+macc               :   2,923                                                                                              
+weights (ro)       :   11,268 B (11.00 KiB) (1 segment)                                                                   
+activations (rw)   :   384 B (384 B) (1 segment) *                                                                        
+ram (total)        :   384 B (384 B) = 384 + 0 + 0                                                                        
+--------------------------------------------------------------------------------------------------------------------------
+(*) 'input'/'output' buffers can be used from the activations buffer
+
+Model name - snn_model
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+m_id   layer (type,original)                   oshape        param/size       macc            connected to   | c_size          c_macc            c_type                
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+1      layer1_weight (Placeholder, Gemm)       [b:64,c:10]   640/2,560                                       | +256(+10.0%)    +704(+100.0%)     Dense_[0]             
+       layer1_bias (Placeholder, Gemm)         [b:64]        64/256                                          | -256(-100.0%)                     
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+3      layer2_weight (Placeholder, Gemm)       [b:32,c:64]   2,048/8,192                                     | +128(+1.6%)     +2,080(+100.0%)   Dense_[2]             
+       layer2_bias (Placeholder, Gemm)         [b:32]        32/128                                          | -128(-100.0%)                     
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+5      layer3_weight (Placeholder, Gemm)       [b:1,c:32]    32/128                                          | +4(+3.1%)       +33(+100.0%)      Dense_[4]             
+       layer3_bias (Placeholder, Gemm)         [b:1]         1/4                                             | -4(-100.0%)                       
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+0      onnxGemm_0 (Input, )                    [b:1,c:10]                                                    |                                   
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+1      _layer1_Gemm_output_0 (Gemm, Gemm)      [b:1,c:64]                      704              onnxGemm_0   |                 -704(-100.0%)     
+                                                                                             layer1_weight   | 
+                                                                                               layer1_bias   | 
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+2      _Relu_output_0 (Nonlinearity, Relu)     [b:1,c:64]                       64   _layer1_Gemm_output_0   |                                   Nonlinearity_[1]      
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+3      _layer2_Gemm_output_0 (Gemm, Gemm)      [b:1,c:32]                    2,080          _Relu_output_0   |                 -2,080(-100.0%)   
+                                                                                             layer2_weight   | 
+                                                                                               layer2_bias   | 
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+4      _Relu_1_output_0 (Nonlinearity, Relu)   [b:1,c:32]                       32   _layer2_Gemm_output_0   |                                   Nonlinearity_[3]      
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+5      _layer3_Gemm_output_0 (Gemm, Gemm)      [b:1,c:1]                        33        _Relu_1_output_0   |                 -33(-100.0%)      
+                                                                                             layer3_weight   | 
+                                                                                               layer3_bias   | 
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+6      node_12 (Nonlinearity, Sigmoid)         [b:1,c:1]                        10   _layer3_Gemm_output_0   |                                   Nonlinearity_[o][5]   
+------ --------------------------------------- ------------- ------------- ------- ----------------------- --- --------------- ----------------- --------------------- 
+model/c-model: macc=2,923/2,923  weights=11,268/11,268  activations=--/384 io=--/0
+
+
+
+Generated C-graph summary
+------------------------------------------------------------------------------------------------------------------------
+model name            : snn_model
+c-name                : network
+c-node #              : 6
+c-array #             : 13
+activations size      : 384 (1 segment)
+weights size          : 11268 (1 segment)
+macc                  : 2923
+inputs                : ['onnxGemm_0_output']
+outputs               : ['node_12_output']
+
+C-Arrays (13)
+------ ------------------------------- ----------- ------------------------- ------------- --------- 
+c_id   name (*_array)                  item/size   domain/mem-pool           c-type        comment   
+------ ------------------------------- ----------- ------------------------- ------------- --------- 
+0      _Relu_1_output_0_output         32/128      activations/**default**   float                   
+1      _Relu_output_0_output           64/256      activations/**default**   float                   
+2      _layer1_Gemm_output_0_bias      64/256      weights/weights           const float             
+3      _layer1_Gemm_output_0_output    64/256      activations/**default**   float                   
+4      _layer1_Gemm_output_0_weights   640/2560    weights/weights           const float             
+5      _layer2_Gemm_output_0_bias      32/128      weights/weights           const float             
+6      _layer2_Gemm_output_0_output    32/128      activations/**default**   float                   
+7      _layer2_Gemm_output_0_weights   2048/8192   weights/weights           const float             
+8      _layer3_Gemm_output_0_bias      1/4         weights/weights           const float             
+9      _layer3_Gemm_output_0_output    1/4         activations/**default**   float                   
+10     _layer3_Gemm_output_0_weights   32/128      weights/weights           const float             
+11     node_12_output                  1/4         activations/**default**   float         /output   
+12     onnxGemm_0_output               10/40       activations/**default**   float         /input    
+------ ------------------------------- ----------- ------------------------- ------------- --------- 
+
+C-Layers (6)
+------ ----------------------- ---- --------------- ------ ------ ---------------------------------- ------------------ 
+c_id   name (*_layer)          id   layer_type      macc   rom    tensors                            shape (array id)   
+------ ----------------------- ---- --------------- ------ ------ ---------------------------------- ------------------ 
+0      _layer1_Gemm_output_0   1    Dense           704    2816   I: onnxGemm_0_output               f32(1x10) (12)     
+                                                                  W: _layer1_Gemm_output_0_weights   f32(64x10) (4)     
+                                                                  W: _layer1_Gemm_output_0_bias      f32(64) (2)        
+                                                                  O: _layer1_Gemm_output_0_output    f32(1x64) (3)      
+------ ----------------------- ---- --------------- ------ ------ ---------------------------------- ------------------ 
+1      _Relu_output_0          2    Nonlinearity    64     0      I: _layer1_Gemm_output_0_output    f32(1x64) (3)      
+                                                                  O: _Relu_output_0_output           f32(1x64) (1)      
+------ ----------------------- ---- --------------- ------ ------ ---------------------------------- ------------------ 
+2      _layer2_Gemm_output_0   3    Dense           2080   8320   I: _Relu_output_0_output           f32(1x64) (1)      
+                                                                  W: _layer2_Gemm_output_0_weights   f32(32x64) (7)     
+                                                                  W: _layer2_Gemm_output_0_bias      f32(32) (5)        
+                                                                  O: _layer2_Gemm_output_0_output    f32(1x32) (6)      
+------ ----------------------- ---- --------------- ------ ------ ---------------------------------- ------------------ 
+3      _Relu_1_output_0        4    Nonlinearity    32     0      I: _layer2_Gemm_output_0_output    f32(1x32) (6)      
+                                                                  O: _Relu_1_output_0_output         f32(1x32) (0)      
+------ ----------------------- ---- --------------- ------ ------ ---------------------------------- ------------------ 
+4      _layer3_Gemm_output_0   5    Dense           33     132    I: _Relu_1_output_0_output         f32(1x32) (0)      
+                                                                  W: _layer3_Gemm_output_0_weights   f32(1x32) (10)     
+                                                                  W: _layer3_Gemm_output_0_bias      f32(1) (8)         
+                                                                  O: _layer3_Gemm_output_0_output    f32(1x1) (9)       
+------ ----------------------- ---- --------------- ------ ------ ---------------------------------- ------------------ 
+5      node_12                 6    Nonlinearity    10     0      I: _layer3_Gemm_output_0_output    f32(1x1) (9)       
+                                                                  O: node_12_output                  f32(1x1) (11)      
+------ ----------------------- ---- --------------- ------ ------ ---------------------------------- ------------------ 
+
+
+
+Number of operations per c-layer
+------- ------ --------------------------------- ------- -------------- 
+c_id    m_id   name (type)                           #op           type 
+------- ------ --------------------------------- ------- -------------- 
+0       1      _layer1_Gemm_output_0 (Dense)         704   smul_f32_f32 
+1       2      _Relu_output_0 (Nonlinearity)          64     op_f32_f32 
+2       3      _layer2_Gemm_output_0 (Dense)       2,080   smul_f32_f32 
+3       4      _Relu_1_output_0 (Nonlinearity)        32     op_f32_f32 
+4       5      _layer3_Gemm_output_0 (Dense)          33   smul_f32_f32 
+5       6      node_12 (Nonlinearity)                 10     op_f32_f32 
+------- ------ --------------------------------- ------- -------------- 
+total                                              2,923 
+
+Number of operation types
+---------------- ------- ----------- 
+operation type         #           % 
+---------------- ------- ----------- 
+smul_f32_f32       2,817       96.4% 
+op_f32_f32           106        3.6% 
+
+Complexity report (model)
+------ ------------------ ------------------------- ------------------------- ------ 
+m_id   name               c_macc                    c_rom                     c_id   
+------ ------------------ ------------------------- ------------------------- ------ 
+1      layer1_weight      ||||||            24.1%   ||||||            25.0%   [0]    
+3      layer2_weight      ||||||||||||||||  71.2%   ||||||||||||||||  73.8%   [2]    
+5      layer3_weight      |                  1.1%   |                  1.2%   [4]    
+2      _Relu_output_0     |                  2.2%   |                  0.0%   [1]    
+4      _Relu_1_output_0   |                  1.1%   |                  0.0%   [3]    
+6      node_12            |                  0.3%   |                  0.0%   [5]    
+------ ------------------ ------------------------- ------------------------- ------ 
+macc=2,923 weights=11,268 act=384 ram_io=0
+ 
+ Requested memory size by section - "stm32n6" target
+ ------------------------------- ------- -------- ------- ----- 
+ module                             text   rodata    data   bss 
+ ------------------------------- ------- -------- ------- ----- 
+ NetworkRuntime1000_CM55_GCC.a     7,844        0       0     0 
+ network.o                           538       48   1,748   148 
+ network_data.o                       48       16      88     0 
+ lib (toolchain)*                    318      328       0     0 
+ ------------------------------- ------- -------- ------- ----- 
+ RT total**                        8,748      392   1,836   148 
+ ------------------------------- ------- -------- ------- ----- 
+ weights                               0   11,272       0     0 
+ activations                           0        0       0   384 
+ io                                    0        0       0     0 
+ ------------------------------- ------- -------- ------- ----- 
+ TOTAL                             8,748   11,664   1,836   532 
+ ------------------------------- ------- -------- ------- ----- 
+ *  toolchain objects (libm/libgcc*)
+ ** RT AI runtime objects (kernels+infrastructure)
+  
+  Summary - "stm32n6" target
+  ---------------------------------------------------
+               FLASH (ro)      %*   RAM (rw)       % 
+  ---------------------------------------------------
+  RT total         10,976   49.3%      1,984   83.8% 
+  ---------------------------------------------------
+  TOTAL            22,248              2,368         
+  ---------------------------------------------------
+  *  rt/total
+
+
+Generated files (7)
+------------------------------------------------------------------ 
+C:\Users\noaht\.stm32cubemx\network_output\network_data_params.h   
+C:\Users\noaht\.stm32cubemx\network_output\network_data_params.c   
+C:\Users\noaht\.stm32cubemx\network_output\network_data.h          
+C:\Users\noaht\.stm32cubemx\network_output\network_data.c          
+C:\Users\noaht\.stm32cubemx\network_output\network_config.h        
+C:\Users\noaht\.stm32cubemx\network_output\network.h               
+C:\Users\noaht\.stm32cubemx\network_output\network.c               

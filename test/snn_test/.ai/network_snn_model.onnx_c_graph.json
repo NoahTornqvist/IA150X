@@ -1,0 +1,652 @@
+{
+    "activations": {
+        "heap_overlay_pool": {
+            "activation_alignment": 4,
+            "buffer_data_size": 0,
+            "buffer_offsets": [
+                {
+                    "buffer_name": "onnxGemm_0_output_array",
+                    "offset": 88,
+                    "size": 40
+                },
+                {
+                    "buffer_name": "_layer1_Gemm_output_0_output_array",
+                    "offset": 128,
+                    "size": 256
+                },
+                {
+                    "buffer_name": "_Relu_output_0_output_array",
+                    "offset": 128,
+                    "size": 256
+                },
+                {
+                    "buffer_name": "_layer2_Gemm_output_0_output_array",
+                    "offset": 0,
+                    "size": 128
+                },
+                {
+                    "buffer_name": "_Relu_1_output_0_output_array",
+                    "offset": 128,
+                    "size": 128
+                },
+                {
+                    "buffer_name": "_layer3_Gemm_output_0_output_array",
+                    "offset": 0,
+                    "size": 4
+                },
+                {
+                    "buffer_name": "node_12_output_array",
+                    "offset": 4,
+                    "size": 4
+                }
+            ],
+            "data_alignment": 4,
+            "pool_id": 0,
+            "pool_size": -1,
+            "used_size": 384
+        }
+    },
+    "activations_alignment": 4,
+    "arguments": "generate --target stm32n6 --name network -m C:/Users/noaht/OneDrive/school/KTH/courses/ongoing/IA150X Examensarbete/code/test/snn_model.onnx --compression none --verbosity 1 --workspace C:/Users/noaht/AppData/Local/Temp/mxAI_workspace5039262498212001062754495353424900 --output C:/Users/noaht/.stm32cubemx/network_output",
+    "c_activations_count": 1,
+    "c_arrays": [
+        {
+            "c_bits": 32,
+            "c_id": 0,
+            "c_mem_pool": "**default**",
+            "c_size_in_byte": 128,
+            "c_type": "float",
+            "format": "float",
+            "is_const": false,
+            "mem_pool": "activations",
+            "n_items": 32,
+            "name": "_Relu_1_output_0_output_array",
+            "offset": 128,
+            "scale": [],
+            "size": 32,
+            "tensors": [
+                {
+                    "name": "_Relu_1_output_0_output",
+                    "shape": [
+                        32
+                    ]
+                }
+            ],
+            "zeropoint": []
+        },
+        {
+            "c_bits": 32,
+            "c_id": 1,
+            "c_mem_pool": "**default**",
+            "c_size_in_byte": 256,
+            "c_type": "float",
+            "format": "float",
+            "is_const": false,
+            "mem_pool": "activations",
+            "n_items": 64,
+            "name": "_Relu_output_0_output_array",
+            "offset": 128,
+            "scale": [],
+            "size": 64,
+            "tensors": [
+                {
+                    "name": "_Relu_output_0_output",
+                    "shape": [
+                        64
+                    ]
+                }
+            ],
+            "zeropoint": []
+        },
+        {
+            "c_bits": 32,
+            "c_id": 2,
+            "c_mem_pool": "weights",
+            "c_size_in_byte": 256,
+            "c_type": "const float",
+            "format": "float",
+            "is_const": true,
+            "mem_pool": "weights",
+            "n_items": 64,
+            "name": "_layer1_Gemm_output_0_bias_array",
+            "offset": 2560,
+            "scale": [],
+            "size": 64,
+            "tensors": [
+                {
+                    "name": "_layer1_Gemm_output_0_bias",
+                    "shape": [
+                        64
+                    ]
+                }
+            ],
+            "zeropoint": [],
+            "zeros": 0
+        },
+        {
+            "c_bits": 32,
+            "c_id": 3,
+            "c_mem_pool": "**default**",
+            "c_size_in_byte": 256,
+            "c_type": "float",
+            "format": "float",
+            "is_const": false,
+            "mem_pool": "activations",
+            "n_items": 64,
+            "name": "_layer1_Gemm_output_0_output_array",
+            "offset": 128,
+            "scale": [],
+            "size": 64,
+            "tensors": [
+                {
+                    "name": "_layer1_Gemm_output_0_output",
+                    "shape": [
+                        64
+                    ]
+                }
+            ],
+            "zeropoint": []
+        },
+        {
+            "c_bits": 32,
+            "c_id": 4,
+            "c_mem_pool": "weights",
+            "c_size_in_byte": 2560,
+            "c_type": "const float",
+            "format": "float",
+            "is_const": true,
+            "mem_pool": "weights",
+            "n_items": 640,
+            "name": "_layer1_Gemm_output_0_weights_array",
+            "offset": 0,
+            "scale": [],
+            "size": 640,
+            "tensors": [
+                {
+                    "name": "_layer1_Gemm_output_0_weights",
+                    "shape": [
+                        64,
+                        10
+                    ]
+                }
+            ],
+            "zeropoint": [],
+            "zeros": 0
+        },
+        {
+            "c_bits": 32,
+            "c_id": 5,
+            "c_mem_pool": "weights",
+            "c_size_in_byte": 128,
+            "c_type": "const float",
+            "format": "float",
+            "is_const": true,
+            "mem_pool": "weights",
+            "n_items": 32,
+            "name": "_layer2_Gemm_output_0_bias_array",
+            "offset": 11008,
+            "scale": [],
+            "size": 32,
+            "tensors": [
+                {
+                    "name": "_layer2_Gemm_output_0_bias",
+                    "shape": [
+                        32
+                    ]
+                }
+            ],
+            "zeropoint": [],
+            "zeros": 0
+        },
+        {
+            "c_bits": 32,
+            "c_id": 6,
+            "c_mem_pool": "**default**",
+            "c_size_in_byte": 128,
+            "c_type": "float",
+            "format": "float",
+            "is_const": false,
+            "mem_pool": "activations",
+            "n_items": 32,
+            "name": "_layer2_Gemm_output_0_output_array",
+            "offset": 0,
+            "scale": [],
+            "size": 32,
+            "tensors": [
+                {
+                    "name": "_layer2_Gemm_output_0_output",
+                    "shape": [
+                        32
+                    ]
+                }
+            ],
+            "zeropoint": []
+        },
+        {
+            "c_bits": 32,
+            "c_id": 7,
+            "c_mem_pool": "weights",
+            "c_size_in_byte": 8192,
+            "c_type": "const float",
+            "format": "float",
+            "is_const": true,
+            "mem_pool": "weights",
+            "n_items": 2048,
+            "name": "_layer2_Gemm_output_0_weights_array",
+            "offset": 2816,
+            "scale": [],
+            "size": 2048,
+            "tensors": [
+                {
+                    "name": "_layer2_Gemm_output_0_weights",
+                    "shape": [
+                        32,
+                        64
+                    ]
+                }
+            ],
+            "zeropoint": [],
+            "zeros": 0
+        },
+        {
+            "c_bits": 32,
+            "c_id": 8,
+            "c_mem_pool": "weights",
+            "c_size_in_byte": 4,
+            "c_type": "const float",
+            "format": "float",
+            "is_const": true,
+            "mem_pool": "weights",
+            "n_items": 1,
+            "name": "_layer3_Gemm_output_0_bias_array",
+            "offset": 11264,
+            "scale": [],
+            "size": 1,
+            "tensors": [
+                {
+                    "name": "_layer3_Gemm_output_0_bias",
+                    "shape": [
+                        1
+                    ]
+                }
+            ],
+            "zeropoint": [],
+            "zeros": 0
+        },
+        {
+            "c_bits": 32,
+            "c_id": 9,
+            "c_mem_pool": "**default**",
+            "c_size_in_byte": 4,
+            "c_type": "float",
+            "format": "float",
+            "is_const": false,
+            "mem_pool": "activations",
+            "n_items": 1,
+            "name": "_layer3_Gemm_output_0_output_array",
+            "offset": 0,
+            "scale": [],
+            "size": 1,
+            "tensors": [
+                {
+                    "name": "_layer3_Gemm_output_0_output",
+                    "shape": [
+                        1
+                    ]
+                }
+            ],
+            "zeropoint": []
+        },
+        {
+            "c_bits": 32,
+            "c_id": 10,
+            "c_mem_pool": "weights",
+            "c_size_in_byte": 128,
+            "c_type": "const float",
+            "format": "float",
+            "is_const": true,
+            "mem_pool": "weights",
+            "n_items": 32,
+            "name": "_layer3_Gemm_output_0_weights_array",
+            "offset": 11136,
+            "scale": [],
+            "size": 32,
+            "tensors": [
+                {
+                    "name": "_layer3_Gemm_output_0_weights",
+                    "shape": [
+                        1,
+                        32
+                    ]
+                }
+            ],
+            "zeropoint": [],
+            "zeros": 0
+        },
+        {
+            "c_bits": 32,
+            "c_id": 11,
+            "c_mem_pool": "**default**",
+            "c_size_in_byte": 4,
+            "c_type": "float",
+            "format": "float",
+            "io_type": "output",
+            "is_const": false,
+            "mem_pool": "activations",
+            "n_items": 1,
+            "name": "node_12_output_array",
+            "offset": 4,
+            "scale": [],
+            "size": 1,
+            "tensors": [
+                {
+                    "name": "node_12_output",
+                    "shape": [
+                        1
+                    ]
+                }
+            ],
+            "zeropoint": []
+        },
+        {
+            "c_bits": 32,
+            "c_id": 12,
+            "c_mem_pool": "**default**",
+            "c_size_in_byte": 40,
+            "c_type": "float",
+            "format": "float",
+            "io_type": "input",
+            "is_const": false,
+            "mem_pool": "activations",
+            "n_items": 10,
+            "name": "onnxGemm_0_output_array",
+            "offset": 88,
+            "scale": [],
+            "size": 10,
+            "tensors": [
+                {
+                    "name": "onnxGemm_0_output",
+                    "shape": [
+                        10
+                    ]
+                }
+            ],
+            "zeropoint": []
+        }
+    ],
+    "c_arrays_n": 13,
+    "c_layers": [
+        {
+            "c_forward": [
+                "forward_dense"
+            ],
+            "c_id": 0,
+            "is_wrapped": "",
+            "layer_type": "Dense",
+            "m_id": 1,
+            "macc": 704,
+            "name": "_layer1_Gemm_output_0",
+            "op_by_type": {
+                "smul_f32_f32": 704
+            },
+            "rom": 2816,
+            "tensors": {
+                "inputs": [
+                    "onnxGemm_0_output"
+                ],
+                "outputs": [
+                    "_layer1_Gemm_output_0_output"
+                ],
+                "scratchs": [],
+                "weights": [
+                    "_layer1_Gemm_output_0_weights",
+                    "_layer1_Gemm_output_0_bias"
+                ]
+            },
+            "weight_sparsity": [
+                0.0,
+                704,
+                0
+            ]
+        },
+        {
+            "c_forward": [
+                "forward_relu"
+            ],
+            "c_id": 1,
+            "is_wrapped": "",
+            "layer_type": "Nonlinearity",
+            "m_id": 2,
+            "macc": 64,
+            "name": "_Relu_output_0",
+            "op_by_type": {
+                "op_f32_f32": 64
+            },
+            "rom": 0,
+            "tensors": {
+                "inputs": [
+                    "_layer1_Gemm_output_0_output"
+                ],
+                "outputs": [
+                    "_Relu_output_0_output"
+                ],
+                "scratchs": [],
+                "weights": []
+            },
+            "weight_sparsity": [
+                0.0,
+                1,
+                0
+            ]
+        },
+        {
+            "c_forward": [
+                "forward_dense"
+            ],
+            "c_id": 2,
+            "is_wrapped": "",
+            "layer_type": "Dense",
+            "m_id": 3,
+            "macc": 2080,
+            "name": "_layer2_Gemm_output_0",
+            "op_by_type": {
+                "smul_f32_f32": 2080
+            },
+            "rom": 8320,
+            "tensors": {
+                "inputs": [
+                    "_Relu_output_0_output"
+                ],
+                "outputs": [
+                    "_layer2_Gemm_output_0_output"
+                ],
+                "scratchs": [],
+                "weights": [
+                    "_layer2_Gemm_output_0_weights",
+                    "_layer2_Gemm_output_0_bias"
+                ]
+            },
+            "weight_sparsity": [
+                0.0,
+                2080,
+                0
+            ]
+        },
+        {
+            "c_forward": [
+                "forward_relu"
+            ],
+            "c_id": 3,
+            "is_wrapped": "",
+            "layer_type": "Nonlinearity",
+            "m_id": 4,
+            "macc": 32,
+            "name": "_Relu_1_output_0",
+            "op_by_type": {
+                "op_f32_f32": 32
+            },
+            "rom": 0,
+            "tensors": {
+                "inputs": [
+                    "_layer2_Gemm_output_0_output"
+                ],
+                "outputs": [
+                    "_Relu_1_output_0_output"
+                ],
+                "scratchs": [],
+                "weights": []
+            },
+            "weight_sparsity": [
+                0.0,
+                1,
+                0
+            ]
+        },
+        {
+            "c_forward": [
+                "forward_dense"
+            ],
+            "c_id": 4,
+            "is_wrapped": "",
+            "layer_type": "Dense",
+            "m_id": 5,
+            "macc": 33,
+            "name": "_layer3_Gemm_output_0",
+            "op_by_type": {
+                "smul_f32_f32": 33
+            },
+            "rom": 132,
+            "tensors": {
+                "inputs": [
+                    "_Relu_1_output_0_output"
+                ],
+                "outputs": [
+                    "_layer3_Gemm_output_0_output"
+                ],
+                "scratchs": [],
+                "weights": [
+                    "_layer3_Gemm_output_0_weights",
+                    "_layer3_Gemm_output_0_bias"
+                ]
+            },
+            "weight_sparsity": [
+                0.0,
+                33,
+                0
+            ]
+        },
+        {
+            "c_forward": [
+                "forward_sigmoid"
+            ],
+            "c_id": 5,
+            "is_wrapped": "",
+            "layer_type": "Nonlinearity",
+            "m_id": 6,
+            "macc": 10,
+            "name": "node_12",
+            "op_by_type": {
+                "op_f32_f32": 10
+            },
+            "rom": 0,
+            "tensors": {
+                "inputs": [
+                    "_layer3_Gemm_output_0_output"
+                ],
+                "outputs": [
+                    "node_12_output"
+                ],
+                "scratchs": [],
+                "weights": []
+            },
+            "weight_sparsity": [
+                0.0,
+                1,
+                0
+            ]
+        }
+    ],
+    "c_name": "network",
+    "c_nodes_n": 6,
+    "c_weights_count": 1,
+    "c_weights_header": 0,
+    "compilation_options": {
+        "compression": "none",
+        "optimization": "balanced",
+        "options": [
+            "allocate-inputs",
+            "allocate-outputs"
+        ]
+    },
+    "data_alignment": 4,
+    "date_time": "2025-03-06T11:53:44+0100",
+    "inputs": [
+        "onnxGemm_0_output"
+    ],
+    "macc": 2923,
+    "memory_footprint": {
+        "activations": 384,
+        "io": [
+            0,
+            0
+        ],
+        "kernel_flash": 10976,
+        "kernel_ram": 1984,
+        "series": "stm32n6",
+        "target": "stm32n6",
+        "toolchain": "arm-none-eabi-gcc (GNU Tools for STM32 12.3.rel1.20240926-1715) 12.3.1 20230626",
+        "toolchain_flash": 646,
+        "toolchain_ram": 0,
+        "weights": 11268
+    },
+    "memory_pools": [],
+    "model_fmt": "float",
+    "model_name": "snn_model",
+    "model_signature": "0xd833ef90458d1be6bedb0d9de7f1946a",
+    "outputs": [
+        "node_12_output"
+    ],
+    "st_ai_version": "2.0.0-20049",
+    "tool_version": "2.0.0-20049",
+    "type": "onnx",
+    "version": "1.2",
+    "weights": {
+        "weights_array": {
+            "buffer_data_size": 11268,
+            "buffer_offsets": [
+                {
+                    "buffer_name": "_layer1_Gemm_output_0_weights_array",
+                    "offset": 0,
+                    "size": 2560
+                },
+                {
+                    "buffer_name": "_layer1_Gemm_output_0_bias_array",
+                    "offset": 2560,
+                    "size": 256
+                },
+                {
+                    "buffer_name": "_layer2_Gemm_output_0_weights_array",
+                    "offset": 2816,
+                    "size": 8192
+                },
+                {
+                    "buffer_name": "_layer2_Gemm_output_0_bias_array",
+                    "offset": 11008,
+                    "size": 128
+                },
+                {
+                    "buffer_name": "_layer3_Gemm_output_0_weights_array",
+                    "offset": 11136,
+                    "size": 128
+                },
+                {
+                    "buffer_name": "_layer3_Gemm_output_0_bias_array",
+                    "offset": 11264,
+                    "size": 4
+                }
+            ],
+            "pool_size": -1,
+            "used_size": 11268
+        }
+    }
+}

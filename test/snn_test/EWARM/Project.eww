@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+  <project>
+    <path>$WS_DIR$\AppliNonSecure\snn_test_AppliNonSecure.ewp</path>
+  </project><project>
+    <path>$WS_DIR$\FSBL\snn_test_FSBL.ewp</path>
+  </project><project>
+    <path>$WS_DIR$\AppliSecure\snn_test_AppliSecure.ewp</path>
+  </project>
+  <batchBuild />
+</workspace>

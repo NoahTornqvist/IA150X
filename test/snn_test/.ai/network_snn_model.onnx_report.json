@@ -1,0 +1,341 @@
+{
+    "_allocate_inputs": 4,
+    "_allocate_outputs": 4,
+    "cli_parameters": "generate --target stm32n6 --name network -m C:/Users/noaht/OneDrive/school/KTH/courses/ongoing/IA150X Examensarbete/code/test/snn_model.onnx --compression none --verbosity 1 --workspace C:/Users/noaht/AppData/Local/Temp/mxAI_workspace5039262498212001062754495353424900 --output C:/Users/noaht/.stm32cubemx/network_output",
+    "cli_version": {
+        "extra": "20049",
+        "major": 2,
+        "micro": 0,
+        "minor": 0
+    },
+    "cli_version_str": "2.0.0-20049",
+    "code_size": 0,
+    "compression": [],
+    "date_time": "2025-03-06T11:53:44+0100",
+    "error": 0,
+    "error_str": [],
+    "exec_cmd": "generate",
+    "exec_duration": 0.0,
+    "hash": "0xd833ef90458d1be6bedb0d9de7f1946a",
+    "inputs": [
+        "onnxGemm_0"
+    ],
+    "layers": [
+        {
+            "c_id": [
+                0
+            ],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 640,
+                "psize": 2560,
+                "rom_size": 2816
+            },
+            "id": 1,
+            "inputs": [],
+            "name": "layer1_weight",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 64,
+                "psize": 256,
+                "rom_size": 0
+            },
+            "id": 1,
+            "inputs": [],
+            "name": "layer1_bias",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [
+                2
+            ],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 2048,
+                "psize": 8192,
+                "rom_size": 8320
+            },
+            "id": 3,
+            "inputs": [],
+            "name": "layer2_weight",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 32,
+                "psize": 128,
+                "rom_size": 0
+            },
+            "id": 3,
+            "inputs": [],
+            "name": "layer2_bias",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [
+                4
+            ],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 32,
+                "psize": 128,
+                "rom_size": 132
+            },
+            "id": 5,
+            "inputs": [],
+            "name": "layer3_weight",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 1,
+                "psize": 4,
+                "rom_size": 0
+            },
+            "id": 5,
+            "inputs": [],
+            "name": "layer3_bias",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 40,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        10
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 0,
+            "inputs": [],
+            "name": "onnxGemm_0",
+            "original": "",
+            "type": "Input"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 704,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 256,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        64
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 1,
+            "inputs": [
+                "onnxGemm_0",
+                "layer1_weight",
+                "layer1_bias"
+            ],
+            "name": "_layer1_Gemm_output_0",
+            "original": "Gemm",
+            "type": "Gemm"
+        },
+        {
+            "c_id": [
+                1
+            ],
+            "extras": {
+                "n_macc": 64,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 256,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        64
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 2,
+            "inputs": [
+                "_layer1_Gemm_output_0"
+            ],
+            "name": "_Relu_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 2080,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 128,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        32
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 3,
+            "inputs": [
+                "_Relu_output_0",
+                "layer2_weight",
+                "layer2_bias"
+            ],
+            "name": "_layer2_Gemm_output_0",
+            "original": "Gemm",
+            "type": "Gemm"
+        },
+        {
+            "c_id": [
+                3
+            ],
+            "extras": {
+                "n_macc": 32,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 128,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        32
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 4,
+            "inputs": [
+                "_layer2_Gemm_output_0"
+            ],
+            "name": "_Relu_1_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 33,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 4,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        1
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 5,
+            "inputs": [
+                "_Relu_1_output_0",
+                "layer3_weight",
+                "layer3_bias"
+            ],
+            "name": "_layer3_Gemm_output_0",
+            "original": "Gemm",
+            "type": "Gemm"
+        },
+        {
+            "c_id": [
+                5
+            ],
+            "extras": {
+                "n_macc": 10,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 4,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        1
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 6,
+            "inputs": [
+                "_layer3_Gemm_output_0"
+            ],
+            "name": "node_12",
+            "original": "Sigmoid",
+            "type": "Nonlinearity"
+        }
+    ],
+    "model_files": [
+        "C:\\Users\\noaht\\OneDrive\\school\\KTH\\courses\\ongoing\\IA150X Examensarbete\\code\\test\\snn_model.onnx"
+    ],
+    "model_n_params": 2817,
+    "model_name": "snn_model",
+    "model_size": 11268,
+    "model_type": "onnx",
+    "name": "network",
+    "outputs": [
+        "node_12"
+    ],
+    "ram_io_size": [
+        0,
+        0
+    ],
+    "ram_size": 384,
+    "report_version": 1.1,
+    "rom_cfact": 1.0,
+    "rom_heap_inspector": 2048,
+    "rom_inputs": [
+        {
+            "c_size": 40,
+            "c_type": "float",
+            "name": "onnxGemm_0"
+        }
+    ],
+    "rom_n_macc": 2923,
+    "rom_outputs": [
+        {
+            "c_size": 4,
+            "c_type": "float",
+            "name": "node_12"
+        }
+    ],
+    "rom_size": 11268,
+    "strategy": "",
+    "tools_api_version": "2.0.0-20049",
+    "tools_version": "2.0.0-20049",
+    "val_error": -1.0,
+    "val_error_desc": "None (None) #-1",
+    "val_metrics": []
+}
