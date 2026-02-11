@@ -1,8 +1,12 @@
-# Bachelor project in IA150X
+# Bachelor thesis project in IA150X
 
 ### Authors
 
 Brian Onoszko and Noah Törnqvist
+
+## Info
+
+Thesis project covering the development, optimization, and measurement of Spiking Neural Network (SNN) models for STMicroelectronics NUCLEO-N657X0-Q development board. Project compared a set of differing neural network sizes in regard to power efficency when executed on CPU contra NPU optimized.
 
 ## Required software
 
