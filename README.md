@@ -6,7 +6,7 @@ Brian Onoszko and Noah Törnqvist
 
 ## Info
 
-Thesis project covering the development, optimization, and measurement of Spiking Neural Network (SNN) models on STMicroelectronics NUCLEO-N657X0-Q development board. Project compared a set of differing neural network sizes in regard to power efficency when executed on pure CPU contra NPU optimized execution.
+Thesis project covering the development, optimization, and measurement of Spiking Neural Network (SNN) models on STMicroelectronics NUCLEO-N657X0-Q development board. Project compared a set of differing neural network sizes in regard to power efficency when executed on pure CPU contra NPU optimized execution. Link to DiVA publication of thesis: https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-371533
 
 ## Required software
 
